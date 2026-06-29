@@ -27,9 +27,10 @@ struct SmartStatusView: View {
 
             VStack(alignment: .leading, spacing: 18) {
                 memorySection
+                    .padding(.horizontal, 14)
                 diskSection
             }
-            .padding(14)
+            .padding(.vertical, 14)
 
             Divider()
 
@@ -78,6 +79,7 @@ struct SmartStatusView: View {
     private var diskSection: some View {
         VStack(alignment: .leading, spacing: 8) {
             sectionHeader("Disk")
+                .padding(.horizontal, 14)
             diskContent
         }
     }
@@ -96,6 +98,7 @@ struct SmartStatusView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(12)
             .background(.quaternary, in: RoundedRectangle(cornerRadius: 8))
+            .padding(.horizontal, 14)
         } else {
             VStack(spacing: 0) {
                 ForEach(Array(model.fields.enumerated()), id: \.element.id) { index, field in
@@ -103,7 +106,6 @@ struct SmartStatusView: View {
                         .background(index.isMultiple(of: 2) ? Color.clear : Color.primary.opacity(0.04))
                 }
             }
-            .clipShape(RoundedRectangle(cornerRadius: 8))
         }
     }
 
@@ -147,7 +149,7 @@ private struct SmartFieldRow: View {
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.trailing)
         }
-        .padding(.horizontal, 12)
+        .padding(.horizontal, 14)
         .padding(.vertical, 7)
     }
 }

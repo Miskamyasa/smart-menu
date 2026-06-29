@@ -14,6 +14,7 @@
 		A00000000000000000000041 /* MemoryBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000051 /* MemoryBar.swift */; };
 		A00000000000000000000042 /* DiskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000052 /* DiskService.swift */; };
 		A00000000000000000000043 /* DiskSMART.m in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000053 /* DiskSMART.m */; };
+		A00000000000000000000044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000056 /* Assets.xcassets */; };
 		A00000000000000000000005 /* SMARTParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000015 /* SMARTParserTests.swift */; };
 		A00000000000000000000006 /* SMARTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000013 /* SMARTParser.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		A00000000000000000000053 /* DiskSMART.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiskSMART.m; sourceTree = "<group>"; };
 		A00000000000000000000054 /* DiskSMART.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiskSMART.h; sourceTree = "<group>"; };
 		A00000000000000000000055 /* SmartMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartMenu-Bridging-Header.h"; sourceTree = "<group>"; };
+		A00000000000000000000056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A00000000000000000000015 /* SMARTParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMARTParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 				A00000000000000000000053 /* DiskSMART.m */,
 				A00000000000000000000054 /* DiskSMART.h */,
 				A00000000000000000000055 /* SmartMenu-Bridging-Header.h */,
+				A00000000000000000000056 /* Assets.xcassets */,
 			);
 			path = SmartMenu;
 			sourceTree = "<group>";
@@ -90,6 +93,7 @@
 			buildPhases = (
 				A00000000000000000000024 /* Sources */,
 				A00000000000000000000016 /* Frameworks */,
+				A00000000000000000000027 /* Resources */,
 			);
 			buildRules = ( );
 			dependencies = ( );
@@ -113,6 +117,10 @@
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A00000000000000000000027 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = ( A00000000000000000000044 /* Assets.xcassets in Resources */, ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXProject section */
 		A00000000000000000000026 /* Project object */ = {
