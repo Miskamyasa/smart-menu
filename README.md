@@ -2,6 +2,8 @@
 
 A minimal SwiftUI macOS menu bar app for system monitoring.
 
+<img src="screenshot.jpg" alt="Smart Menu panel showing memory usage and disk SMART fields" width="420">
+
 The menu bar shows a square gauge that fills with current memory usage. Clicking it opens a panel with:
 
 - **Memory** — used / total and a live usage bar, refreshed every second.
