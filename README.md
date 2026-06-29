@@ -29,3 +29,7 @@ make test      # run unit tests
 - The app checks `/opt/homebrew/{bin,sbin}/smartctl`, `/usr/local/{bin,sbin}/smartctl`, then `PATH`.
 - It runs unsandboxed so it can launch the external `smartctl` command.
 - Some `smartctl` versions return a non-zero status while still printing usable data; the app shows parsed output when available and only reports failure when no output was produced.
+
+## License
+
+[MIT](LICENSE)
