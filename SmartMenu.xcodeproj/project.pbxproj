@@ -11,6 +11,8 @@
 		A00000000000000000000002 /* SmartStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000012 /* SmartStatusView.swift */; };
 		A00000000000000000000003 /* SMARTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000013 /* SMARTParser.swift */; };
 		A00000000000000000000004 /* SmartctlRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000014 /* SmartctlRunner.swift */; };
+		A00000000000000000000040 /* MemoryMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000050 /* MemoryMonitor.swift */; };
+		A00000000000000000000041 /* MemoryBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000051 /* MemoryBar.swift */; };
 		A00000000000000000000005 /* SMARTParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000015 /* SMARTParserTests.swift */; };
 		A00000000000000000000006 /* SMARTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000013 /* SMARTParser.swift */; };
 /* End PBXBuildFile section */
@@ -22,6 +24,8 @@
 		A00000000000000000000012 /* SmartStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartStatusView.swift; sourceTree = "<group>"; };
 		A00000000000000000000013 /* SMARTParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMARTParser.swift; sourceTree = "<group>"; };
 		A00000000000000000000014 /* SmartctlRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartctlRunner.swift; sourceTree = "<group>"; };
+		A00000000000000000000050 /* MemoryMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMonitor.swift; sourceTree = "<group>"; };
+		A00000000000000000000051 /* MemoryBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryBar.swift; sourceTree = "<group>"; };
 		A00000000000000000000015 /* SMARTParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMARTParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +51,8 @@
 				A00000000000000000000012 /* SmartStatusView.swift */,
 				A00000000000000000000013 /* SMARTParser.swift */,
 				A00000000000000000000014 /* SmartctlRunner.swift */,
+				A00000000000000000000050 /* MemoryMonitor.swift */,
+				A00000000000000000000051 /* MemoryBar.swift */,
 			);
 			path = SmartMenu;
 			sourceTree = "<group>";
@@ -130,7 +136,7 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A00000000000000000000024 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = ( A00000000000000000000001, A00000000000000000000002, A00000000000000000000003, A00000000000000000000004, ); runOnlyForDeploymentPostprocessing = 0; };
+		A00000000000000000000024 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = ( A00000000000000000000001, A00000000000000000000002, A00000000000000000000003, A00000000000000000000004, A00000000000000000000040, A00000000000000000000041, ); runOnlyForDeploymentPostprocessing = 0; };
 		A00000000000000000000025 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = ( A00000000000000000000005, A00000000000000000000006, ); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 

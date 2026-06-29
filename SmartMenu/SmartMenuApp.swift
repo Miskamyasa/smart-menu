@@ -2,9 +2,13 @@ import SwiftUI
 
 @main
 struct SmartMenuApp: App {
+    @StateObject private var memory = MemoryMonitor()
+
     var body: some Scene {
-        MenuBarExtra("Smart Menu", systemImage: "externaldrive") {
-            SmartStatusView()
+        MenuBarExtra {
+            SmartStatusView(memory: memory)
+        } label: {
+            Image(nsImage: MenuBarGauge.image(fraction: memory.usedFraction))
         }
         .menuBarExtraStyle(.window)
     }
