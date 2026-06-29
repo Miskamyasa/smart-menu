@@ -2,21 +2,15 @@ import SwiftUI
 
 @MainActor
 final class SmartStatusModel: ObservableObject {
-    @Published private(set) var fields = SMARTParser.parse("")
-    @Published private(set) var isLoading = false
+    @Published private(set) var fields: [SMARTField] = []
     @Published private(set) var errorMessage: String?
 
     func refresh() {
-        isLoading = true
-        errorMessage = nil
-
-        Task {
-            do {
-                fields = SMARTParser.parse(try await SmartctlRunner.run())
-            } catch {
-                errorMessage = error.localizedDescription
-            }
-            isLoading = false
+        do {
+            fields = try DiskService.read()
+            errorMessage = nil
+        } catch {
+            errorMessage = error.localizedDescription
         }
     }
 }
@@ -55,9 +49,6 @@ struct SmartStatusView: View {
             Text("Smart Menu")
                 .font(.headline)
             Spacer()
-            if model.isLoading {
-                ProgressView().controlSize(.small)
-            }
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 12)
@@ -113,7 +104,6 @@ struct SmartStatusView: View {
                 }
             }
             .clipShape(RoundedRectangle(cornerRadius: 8))
-            .redacted(reason: model.isLoading && model.fields.allSatisfy { $0.value == "—" } ? .placeholder : [])
         }
     }
 
@@ -124,7 +114,6 @@ struct SmartStatusView: View {
             Button { model.refresh() } label: {
                 Label("Refresh", systemImage: "arrow.clockwise")
             }
-            .disabled(model.isLoading)
 
             Spacer()
 

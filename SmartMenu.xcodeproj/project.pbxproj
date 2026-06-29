@@ -10,9 +10,10 @@
 		A00000000000000000000001 /* SmartMenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000011 /* SmartMenuApp.swift */; };
 		A00000000000000000000002 /* SmartStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000012 /* SmartStatusView.swift */; };
 		A00000000000000000000003 /* SMARTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000013 /* SMARTParser.swift */; };
-		A00000000000000000000004 /* SmartctlRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000014 /* SmartctlRunner.swift */; };
 		A00000000000000000000040 /* MemoryMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000050 /* MemoryMonitor.swift */; };
 		A00000000000000000000041 /* MemoryBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000051 /* MemoryBar.swift */; };
+		A00000000000000000000042 /* DiskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000052 /* DiskService.swift */; };
+		A00000000000000000000043 /* DiskSMART.m in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000053 /* DiskSMART.m */; };
 		A00000000000000000000005 /* SMARTParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000015 /* SMARTParserTests.swift */; };
 		A00000000000000000000006 /* SMARTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000013 /* SMARTParser.swift */; };
 /* End PBXBuildFile section */
@@ -23,9 +24,12 @@
 		A00000000000000000000011 /* SmartMenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartMenuApp.swift; sourceTree = "<group>"; };
 		A00000000000000000000012 /* SmartStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartStatusView.swift; sourceTree = "<group>"; };
 		A00000000000000000000013 /* SMARTParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMARTParser.swift; sourceTree = "<group>"; };
-		A00000000000000000000014 /* SmartctlRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartctlRunner.swift; sourceTree = "<group>"; };
 		A00000000000000000000050 /* MemoryMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMonitor.swift; sourceTree = "<group>"; };
 		A00000000000000000000051 /* MemoryBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryBar.swift; sourceTree = "<group>"; };
+		A00000000000000000000052 /* DiskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskService.swift; sourceTree = "<group>"; };
+		A00000000000000000000053 /* DiskSMART.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiskSMART.m; sourceTree = "<group>"; };
+		A00000000000000000000054 /* DiskSMART.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiskSMART.h; sourceTree = "<group>"; };
+		A00000000000000000000055 /* SmartMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartMenu-Bridging-Header.h"; sourceTree = "<group>"; };
 		A00000000000000000000015 /* SMARTParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMARTParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,9 +54,12 @@
 				A00000000000000000000011 /* SmartMenuApp.swift */,
 				A00000000000000000000012 /* SmartStatusView.swift */,
 				A00000000000000000000013 /* SMARTParser.swift */,
-				A00000000000000000000014 /* SmartctlRunner.swift */,
 				A00000000000000000000050 /* MemoryMonitor.swift */,
 				A00000000000000000000051 /* MemoryBar.swift */,
+				A00000000000000000000052 /* DiskService.swift */,
+				A00000000000000000000053 /* DiskSMART.m */,
+				A00000000000000000000054 /* DiskSMART.h */,
+				A00000000000000000000055 /* SmartMenu-Bridging-Header.h */,
 			);
 			path = SmartMenu;
 			sourceTree = "<group>";
@@ -136,15 +143,15 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A00000000000000000000024 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = ( A00000000000000000000001, A00000000000000000000002, A00000000000000000000003, A00000000000000000000004, A00000000000000000000040, A00000000000000000000041, ); runOnlyForDeploymentPostprocessing = 0; };
+		A00000000000000000000024 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = ( A00000000000000000000001, A00000000000000000000002, A00000000000000000000003, A00000000000000000000040, A00000000000000000000041, A00000000000000000000042, A00000000000000000000043, ); runOnlyForDeploymentPostprocessing = 0; };
 		A00000000000000000000025 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = ( A00000000000000000000005, A00000000000000000000006, ); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		A00000000000000000000032 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CLANG_WARN_BOOL_CONVERSION = YES; CLANG_WARN_CONSTANT_CONVERSION = YES; CLANG_WARN_EMPTY_BODY = YES; CLANG_WARN_ENUM_CONVERSION = YES; CLANG_WARN_INT_CONVERSION = YES; CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR; CLANG_WARN_UNREACHABLE_CODE = YES; CLANG_WARN__DUPLICATE_METHOD_MATCH = YES; COPY_PHASE_STRIP = NO; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_STRICT_OBJC_MSGSEND = YES; ENABLE_TESTABILITY = YES; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_NO_COMMON_BLOCKS = YES; GCC_OPTIMIZATION_LEVEL = 0; MACOSX_DEPLOYMENT_TARGET = 13.0; SDKROOT = macosx; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
 		A00000000000000000000033 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CLANG_WARN_BOOL_CONVERSION = YES; CLANG_WARN_CONSTANT_CONVERSION = YES; CLANG_WARN_EMPTY_BODY = YES; CLANG_WARN_ENUM_CONVERSION = YES; CLANG_WARN_INT_CONVERSION = YES; CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR; CLANG_WARN_UNREACHABLE_CODE = YES; CLANG_WARN__DUPLICATE_METHOD_MATCH = YES; COPY_PHASE_STRIP = NO; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; ENABLE_NS_ASSERTIONS = NO; ENABLE_STRICT_OBJC_MSGSEND = YES; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_NO_COMMON_BLOCKS = YES; MACOSX_DEPLOYMENT_TARGET = 13.0; SDKROOT = macosx; SWIFT_COMPILATION_MODE = wholemodule; }; name = Release; };
-		A00000000000000000000034 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; ENABLE_APP_SANDBOX = NO; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "Smart Menu"; INFOPLIST_KEY_LSUIElement = YES; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.SmartMenu; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; }; name = Debug; };
-		A00000000000000000000035 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; ENABLE_APP_SANDBOX = NO; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "Smart Menu"; INFOPLIST_KEY_LSUIElement = YES; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.SmartMenu; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; }; name = Release; };
+		A00000000000000000000034 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; ENABLE_APP_SANDBOX = NO; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "Smart Menu"; INFOPLIST_KEY_LSUIElement = YES; MARKETING_VERSION = 1.0; OTHER_LDFLAGS = "-framework IOKit"; PRODUCT_BUNDLE_IDENTIFIER = com.example.SmartMenu; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_OBJC_BRIDGING_HEADER = "SmartMenu/SmartMenu-Bridging-Header.h"; SWIFT_VERSION = 5.0; }; name = Debug; };
+		A00000000000000000000035 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; ENABLE_APP_SANDBOX = NO; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "Smart Menu"; INFOPLIST_KEY_LSUIElement = YES; MARKETING_VERSION = 1.0; OTHER_LDFLAGS = "-framework IOKit"; PRODUCT_BUNDLE_IDENTIFIER = com.example.SmartMenu; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_OBJC_BRIDGING_HEADER = "SmartMenu/SmartMenu-Bridging-Header.h"; SWIFT_VERSION = 5.0; }; name = Release; };
 		A00000000000000000000036 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = com.example.SmartMenuTests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; }; name = Debug; };
 		A00000000000000000000037 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = com.example.SmartMenuTests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; }; name = Release; };
 /* End XCBuildConfiguration section */
